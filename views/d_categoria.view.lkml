@@ -9,7 +9,4 @@ view: d_categoria {
     type: number
     sql: ${TABLE}."ID_CATEGORIA" ;;
   }
-  measure: count {
-    type: count
-  }
 }

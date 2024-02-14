@@ -21,7 +21,28 @@ view: h_ventas {
     type: number
     sql: ${TABLE}."VENTAS" ;;
   }
-  measure: count {
+  measure: cuenta {
     type: count
   }
+  measure: suma {
+    type: sum
+    sql: ${TABLE}."VENTAS" ;;
+  }
+  measure: pct_total {
+    type: percent_of_total
+    sql: ${TABLE}."VENTAS" ;;
+  }
+  measure: minimo {
+    type: min
+    sql: ${TABLE}."VENTAS" ;;
+  }
+  measure: maximo {
+    type: max
+    sql: ${TABLE}."VENTAS" ;;
+  }
+  measure: media {
+    type: average
+    sql: ${TABLE}."VENTAS" ;;
+  }
+
 }

@@ -32,7 +32,4 @@ view: d_fecha {
     type: number
     sql: ${TABLE}."MES" ;;
   }
-  measure: count {
-    type: count
-  }
 }

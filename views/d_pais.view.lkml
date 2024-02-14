@@ -9,7 +9,4 @@ view: d_pais {
     type: number
     sql: ${TABLE}."ID_PAIS" ;;
   }
-  measure: count {
-    type: count
-  }
 }

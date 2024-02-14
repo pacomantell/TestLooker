@@ -9,7 +9,4 @@ view: d_tipo_tarjeta {
     type: number
     sql: ${TABLE}."ID_TIPO_TARJETA" ;;
   }
-  measure: count {
-    type: count
-  }
 }
