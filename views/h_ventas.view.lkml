@@ -40,9 +40,6 @@ view: h_ventas {
     type: max
     sql: ${TABLE}."VENTAS" ;;
   }
-  measure: media {
-    type: average
-    sql: ${TABLE}."VENTAS" ;;
-  }
+
 
 }
