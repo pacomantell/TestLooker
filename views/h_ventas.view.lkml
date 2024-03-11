@@ -30,7 +30,7 @@ view: h_ventas {
   }
   measure: pct_total {
     type: percent_of_total
-    sql: ${TABLE}."VENTAS" ;;
+    sql: ${suma} ;;
   }
   measure: minimo {
     type: min
