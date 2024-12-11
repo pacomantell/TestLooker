@@ -37,5 +37,9 @@ view: h_ventas {
     sql: ${TABLE}."VENTAS" ;;
   }
 
+  measure: maximo {
+    type: max
+    sql: ${TABLE}."VENTAS" ;;
+  }
 
 }
