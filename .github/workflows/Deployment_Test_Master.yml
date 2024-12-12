@@ -16,3 +16,9 @@ jobs:
 
       - name: Copy file
         run: cp models/formacion_analytics_test.model.lkml models/formacion_analytics.model.lkml
+      
+      - name: Push Changes
+          git config --global user.name 'pacomantell'
+          git config --global user.email 'paco.mantell94@gmail.com'
+          git commit -am "Copy model File"
+          git push
