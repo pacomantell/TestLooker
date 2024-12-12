@@ -1,0 +1,33 @@
+name: deployment_test_prod
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+permissions:
+ contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Copy file
+        run: cp models/formacion_analytics_test.model.lkml models/formacion_analytics.model.lkml
+
+      - name: Remove Previous File
+        run: rm models/formacion_analytics_test.model.lkml
+      
+      - name: Push Changes
+        run: |
+          git config --global user.name 'pacomantell'
+          git config --global user.email 'paco.mantell94@gmail.com'
+          git add -A
+          git commit -am "Copy model File"
+          git push
