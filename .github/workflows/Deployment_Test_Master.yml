@@ -15,4 +15,8 @@ jobs:
 
       - name: Copy file
         run: |
-          cp models/formacion_analytics.model.lkml models/formacion_analytics.model.lkml
+          cp models/formacion_analytics_test.model.lkml models/formacion_analytics.model.lkml
+            - name: Copy file
+      - name: Remove file
+        run: |
+          rm models/formacion_analytics_test.model.lkml
