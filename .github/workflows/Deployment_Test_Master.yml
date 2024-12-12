@@ -15,10 +15,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Copy file
-        run: |
-          mv formacion_analytics_test.model.lkml formacion_analytics.model.lkml
-            - name: Copy file
-      - name: Remove file
-        run: |
-          rm models/formacion_analytics_test.model.lkml
+        uses: canastro/copy-file-action@PMZ-Test
+        with:
+          source: "formacion_analytics_test.model.lkml"
+          target: "formacion_analytics.model.lkml"
 
