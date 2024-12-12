@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Copy file
-        uses: canastro/copy-file-action@PMZ-Test
+        uses: canastro/copy-file-action@master
         with:
           source: "models/formacion_analytics_test.model.lkml"
           target: "models/formacion_analytics.model.lkml"
