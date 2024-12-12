@@ -5,6 +5,7 @@ on:
   pull_request:
     branches:
       - master
+      - PMZ-Test
 jobs:
   build:
     runs-on: ubuntu-latest
