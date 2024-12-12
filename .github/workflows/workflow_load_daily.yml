@@ -1,1 +1,40 @@
-- HOLA
+name: workflow_load_daily
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 8 * * *'    
+
+jobs:
+  dbt_ci_jobs:
+    name: dbt_workflow_daily
+    runs-on: ubuntu-latest
+    environment: pre
+    env:
+      DBT_PROFILES_DIR: ./
+      DBT_ACCOUNT: ${{ vars.DBT_ACCOUNT }}
+      DBT_DATABASE: ${{ vars.DBT_DATABASE }}
+      DBT_SCHEMA: ${{ vars.DBT_SCHEMA }}
+      DBT_USER: ${{ vars.DBT_USER }}
+      DBT_ENV_SECRET_PWD: ${{ secrets.DBT_ENV_SECRET_PWD }} 
+      DBT_THREADS: ${{ vars.DBT_THREADS }} 
+      DBT_ENVIRONMENTS: ${{vars.DBT_ENVIRONMENTS}}
+      DBT_ROLE: ${{vars.DBT_ROLE}}
+      DBT_WAREHOUSE: ${{vars.DBT_WAREHOUSE}}
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-python@v1
+      with:
+        python-version: "3.10.13"       
+    
+    - name: Install dependencies
+      run: |
+        pip install dbt-snowflake==1.6.4
+        dbt deps            
+
+    - name: Run dbt debug
+      run: dbt debug --target pre
+
+    - name: Run dbt build
+      run: dbt build --target pre
