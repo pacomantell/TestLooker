@@ -17,6 +17,6 @@ jobs:
       - name: Copy file
         uses: canastro/copy-file-action@PMZ-Test
         with:
-          source: "formacion_analytics_test.model.lkml"
-          target: "formacion_analytics.model.lkml"
+          source: "models/formacion_analytics_test.model.lkml"
+          target: "models/formacion_analytics.model.lkml"
 
