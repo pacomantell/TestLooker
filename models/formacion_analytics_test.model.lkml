@@ -41,4 +41,5 @@ explore: ventas {
     sql_on: ${ventas.id_pais} = ${pais.id_pais} ;;
   }
 
+
 }
