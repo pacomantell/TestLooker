@@ -20,3 +20,4 @@ jobs:
       - name: Remove file
         run: |
           rm models/formacion_analytics_test.model.lkml
+
