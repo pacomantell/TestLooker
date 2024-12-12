@@ -21,5 +21,6 @@ jobs:
         run: |
           git config --global user.name 'pacomantell'
           git config --global user.email 'paco.mantell94@gmail.com'
+          git add -A
           git commit -am "Copy model File"
           git push
