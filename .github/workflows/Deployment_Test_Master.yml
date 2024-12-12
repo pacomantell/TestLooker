@@ -14,4 +14,4 @@ jobs:
 
       - name: Copy file
         run: |
-          cp .github/workflows/src.yaml .github/workflows/dest.yaml
+          cp models/formacion_analytics.model.lkml models/formacion_analytics.model.lkml
