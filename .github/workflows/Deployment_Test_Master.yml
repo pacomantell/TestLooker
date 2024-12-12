@@ -16,7 +16,7 @@ jobs:
 
       - name: Copy file
         run: |
-          mv models/formacion_analytics_test.model.lkml models/formacion_analytics.model.lkml
+          mv formacion_analytics_test.model.lkml formacion_analytics.model.lkml
             - name: Copy file
       - name: Remove file
         run: |
