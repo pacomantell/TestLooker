@@ -1,6 +1,7 @@
 name: deployment_test_prod
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - master
