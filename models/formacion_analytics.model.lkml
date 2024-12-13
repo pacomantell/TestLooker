@@ -1,7 +1,5 @@
 connection: "formacion_analytics_test"
 
-
-
 # include all the views
 include: "/views/**/*.view.lkml"
 
