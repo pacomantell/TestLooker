@@ -2,7 +2,7 @@ name: deployment_test_prod
 
 on:
   workflow_dispatch:
-  push:
+  pull:
     branches:
       - Deployment
 permissions:
