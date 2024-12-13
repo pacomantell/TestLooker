@@ -1,4 +1,4 @@
-connection: "formacion_analytics_connection"
+connection: "formacion_analytics_test"
 
 # include all the views
 include: "/views/**/*.view.lkml"
