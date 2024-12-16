@@ -44,4 +44,8 @@ view: h_ventas {
     type: average
     sql: ${TABLE}."VENTAS" ;;
   }
+  measure: media_comp {
+    type: number
+    sql: ${suma} / NULLIF(${cuenta},0) ;;
+  }
 }
