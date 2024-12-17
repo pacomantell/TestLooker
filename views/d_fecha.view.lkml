@@ -29,7 +29,7 @@ view: d_fecha {
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
     datatype: date
-    sql: DATETIME_SUB(${TABLE}."FECHA", INTERVAL 1 YEAR) ;;
+    sql: DATEADD(year, -2, ${TABLE}."FECHA") ;;
   }
   dimension: id_fecha {
     type: number
