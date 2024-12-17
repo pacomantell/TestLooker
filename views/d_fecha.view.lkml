@@ -29,11 +29,15 @@ view: d_fecha {
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
     datatype: date
-    sql: DATEADD(year, -2, ${TABLE}."FECHA") ;;
+    sql: DATEADD(year, -1, ${TABLE}."FECHA") ;;
   }
   dimension: id_fecha {
     type: number
     sql: ${TABLE}."ID_FECHA" ;;
+  }
+  dimension: id_fecha_ly {
+    type: number
+    sql: ${TABLE}."ID_FECHA" - 10000 ;;
   }
   dimension: mes {
     type: number
