@@ -24,6 +24,13 @@ view: d_fecha {
     datatype: date
     sql: ${TABLE}."FECHA" ;;
   }
+  dimension_group: fecha_ly {
+    type: time
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: DATETIME_SUB(${TABLE}."FECHA", INTERVAL 1 YEAR) ;;
+  }
   dimension: id_fecha {
     type: number
     sql: ${TABLE}."ID_FECHA" ;;
