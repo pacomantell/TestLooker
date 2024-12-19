@@ -8,6 +8,7 @@ datagroup: formacion_analytics_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+
 persist_with: formacion_analytics_default_datagroup
 
 explore: ventas {
