@@ -48,4 +48,8 @@ view: h_ventas {
     type: number
     sql: ${suma} / NULLIF(${cuenta},0) ;;
   }
+  measure: media2 {
+    type: average
+    sql: ${TABLE}."VENTAS" ;;
+  }
 }
