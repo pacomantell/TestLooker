@@ -16,7 +16,7 @@ explore: ventas {
 
   join: fecha {
     from: d_fecha
-    type:  inner
+    type:  full_outer
     relationship:  many_to_one
     sql_on: ${ventas.id_fecha} = ${fecha.id_fecha} ;;
   }
